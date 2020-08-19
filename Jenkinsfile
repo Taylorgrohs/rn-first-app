@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'npm install --global expo-cli'
                 sh 'npm install'
                 sh 'npm run start'
             }
